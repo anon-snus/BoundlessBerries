@@ -2,7 +2,7 @@ web3==6.13.0
 fake-useragent==1.4.0
 requests==2.31.0
 python-dotenv==1.0.0
-
+aiohttp_socks==0.10.1
 hexbytes~=0.3.1
 idna~=3.6
 pyunormalize~=15.1.0
