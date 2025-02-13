@@ -14,7 +14,6 @@ async def main():
 	if base_rpc:
 		Networks.Base.rpc = base_rpc
 	for key in keys:
-		print(Networks.Base.rpc)
 		client = Client(private_key=key, network=Networks.Base)
 		base = Base(client=client)
 		a = await base.mint_nft()
