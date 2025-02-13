@@ -13,8 +13,8 @@ with open('data/proxies.txt') as f:
 async def main():
 	if base_rpc:
 		Networks.Base.rpc = base_rpc
-	for key in keys:
-		client = Client(private_key=key, network=Networks.Base)
+	for key , proxy in zip(keys, proxies):
+		client = Client(private_key=key, network=Networks.Base, proxy=proxy)
 		base = Base(client=client)
 		a = await base.mint_nft()
 		print(a)
